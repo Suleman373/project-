@@ -8,6 +8,7 @@ import { Dashboard } from './pages/Dashboard/Dashboard';
 import { Patients } from './pages/Patients/Patients';
 import { PatientProfile } from './pages/Patients/PatientProfile';
 import { Appointments } from './pages/Appointments/Appointments';
+import { Dentists } from './pages/Dentists/Dentists';
 
 // Placeholder components for other routes
 const Placeholder = ({ title }: { title: string }) => (
@@ -29,7 +30,7 @@ function App() {
               <Route path="/appointments" element={<Appointments />} />
               <Route path="/patients" element={<Patients />} />
               <Route path="/patients/:id" element={<PatientProfile />} />
-              <Route path="/dentists" element={<Placeholder title="Dentists" />} />
+              <Route path="/dentists" element={<Dentists />} />
               <Route path="/treatments" element={<Placeholder title="Treatment Plans" />} />
               <Route path="/prescriptions" element={<Placeholder title="Prescriptions" />} />
               <Route path="/billing" element={<Placeholder title="Billing" />} />
