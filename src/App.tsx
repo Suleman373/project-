@@ -5,6 +5,8 @@ import { ProtectedRoute } from './components/ProtectedRoute';
 import { DashboardLayout } from './layouts/DashboardLayout/DashboardLayout';
 import { Login } from './pages/Login/Login';
 import { Dashboard } from './pages/Dashboard/Dashboard';
+import { Patients } from './pages/Patients/Patients';
+import { PatientProfile } from './pages/Patients/PatientProfile';
 
 // Placeholder components for other routes
 const Placeholder = ({ title }: { title: string }) => (
@@ -24,7 +26,8 @@ function App() {
             <Route element={<DashboardLayout />}>
               <Route path="/" element={<Dashboard />} />
               <Route path="/appointments" element={<Placeholder title="Appointments" />} />
-              <Route path="/patients" element={<Placeholder title="Patients" />} />
+              <Route path="/patients" element={<Patients />} />
+              <Route path="/patients/:id" element={<PatientProfile />} />
               <Route path="/dentists" element={<Placeholder title="Dentists" />} />
               <Route path="/treatments" element={<Placeholder title="Treatment Plans" />} />
               <Route path="/prescriptions" element={<Placeholder title="Prescriptions" />} />
