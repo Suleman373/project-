@@ -1,0 +1,94 @@
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--color-background);
+}
+
+.leftPanel {
+  flex: 1;
+  background: linear-gradient(135deg, var(--color-primary-900), var(--color-primary-700));
+  color: var(--color-white);
+  padding: var(--spacing-12);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .leftPanel {
+    display: flex;
+  }
+}
+
+.brandContainer {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+
+.logoIcon {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.brandName {
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  margin: 0;
+}
+
+.heroText {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  line-height: 1.2;
+  margin-bottom: var(--spacing-4);
+  max-width: 480px;
+}
+
+.subHeroText {
+  font-size: var(--text-lg);
+  color: var(--color-primary-100);
+  max-width: 400px;
+  line-height: 1.5;
+}
+
+.rightPanel {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-6);
+}
+
+.loginCard {
+  width: 100%;
+  max-width: 400px;
+  border: none;
+  box-shadow: var(--shadow-lg);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.forgotPassword {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.link {
+  font-size: var(--text-sm);
+  color: var(--color-primary-600);
+  font-weight: var(--font-medium);
+}
+
+.link:hover {
+  color: var(--color-primary-700);
+}

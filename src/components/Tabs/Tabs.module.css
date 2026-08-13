@@ -1,0 +1,42 @@
+.tabs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  border-bottom: var(--border-width) solid var(--border-color);
+  margin-bottom: var(--spacing-4);
+  overflow-x: auto;
+}
+
+.trigger {
+  padding: var(--spacing-2) var(--spacing-1);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-text-secondary);
+  border-bottom: 2px solid transparent;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.trigger:hover {
+  color: var(--color-text-primary);
+}
+
+.trigger.active {
+  color: var(--color-primary-600);
+  border-bottom-color: var(--color-primary-600);
+}
+
+.content {
+  animation: fadeIn var(--transition-fast) ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
