@@ -1,0 +1,141 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+@media (min-width: 640px) {
+  .header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.title {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: var(--color-gray-900);
+  margin: 0;
+}
+
+.subtitle {
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  margin: 0;
+  margin-top: var(--spacing-1);
+}
+
+.tableCard {
+  border: none;
+  box-shadow: var(--shadow-sm);
+}
+
+.tableToolbar {
+  padding: var(--spacing-4);
+  border-bottom: var(--border-width) solid var(--border-color);
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+
+.searchWrapper {
+  width: 100%;
+  max-width: 320px;
+}
+
+.filterGroup {
+  min-width: 180px;
+}
+
+.fontMedium {
+  font-weight: var(--font-medium);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.125rem 0.5rem;
+  border-radius: var(--radius-full);
+  font-size: var(--text-xs);
+  font-weight: var(--font-medium);
+}
+
+.badgeActive {
+  background-color: var(--color-primary-50);
+  color: var(--color-primary-700);
+}
+
+.badgePending {
+  background-color: var(--color-warning-50);
+  color: var(--color-warning-700);
+}
+
+.badgeCompleted {
+  background-color: var(--color-success-50);
+  color: var(--color-success-700);
+}
+
+.emptyCell {
+  text-align: center;
+  padding: var(--spacing-8);
+  color: var(--color-text-secondary);
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-4);
+}
+
+@media (min-width: 640px) {
+  .formGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.fullSpan {
+  grid-column: 1 / -1;
+}
+
+.procedureSection {
+  background-color: var(--color-gray-50);
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-4);
+  margin-top: var(--spacing-2);
+}
+
+.sectionTitle {
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  margin: 0 0 var(--spacing-3) 0;
+  color: var(--color-gray-800);
+}
+
+.procedureGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-3);
+}
+
+@media (max-width: 640px) {
+  .procedureGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.addProcedureBtn {
+  margin-top: var(--spacing-2);
+}
